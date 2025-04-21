@@ -1,0 +1,52 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 26px auto;
+    gap: 12px;
+}
+.logo {
+    margin-top: 38px;
+    margin-bottom: 18px;
+    display: block;
+    text-align: center;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    margin-bottom: 6px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 22px;
+}
+p {
+    font-size: 15px;
+    line-height: 22px;
+
+}
+.grid-input {
+    display: flex;
+    gap: 4px;
+}
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+h1, p {
+    text-align: center;
+}
+.warn-message {
+    color: rgb(226, 87, 87);
+    font-weight: 600;
+}
+
+ion-spinner {
+    width: 15px;
+    height: 15px;
+    color: white;
+
+}
+
+

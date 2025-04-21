@@ -1,0 +1,49 @@
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <button class="" (click)="this.router.navigate(['/app/tabs/explore'])">Voltar</button>
+  <div class="main-wrapper">
+    <img src="assets/icon/favicon.png" alt="">
+    <p class="drinking-water">
+      {{drinkingWater()}} <span class="ml">ml ({{percentage()}}%)</span>
+    </p>
+
+    <p class="goal">/{{goal()}}</p>
+
+    @if (drinkingWater() >= goal()) {
+      <div class="chip">✔️ Parabéns! Você concluiu a meta de hoje.</div>
+    }
+    <div class="wrapper-drink">
+      <!--<button (click)="drinkWater()" class="btn-primary">Beber</button>-->
+      <button id="open-modal" class="btn-primary">
+        <i class="ti ti-plus"></i>
+        Beber
+      </button>
+      <button class="btn-cup">
+        <i class="ti ti-cup"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <ion-modal trigger="open-modal">
+    <ng-template>
+    <ion-content [fullscreen]="true" class="ion-padding">
+      <button class="modal-close" (click)="cancel()">
+        <i class="ti ti-x"></i>
+      </button>
+      <div class="range-wrapper">
+
+        <ion-range [step]="10" [pin]="true" [value]="quantityOfWater()" [min]="10" [max]="cupCapacity()" (ionChange)="onIonChange($event)"></ion-range>
+      </div>
+      <input type="number" maxlength="3" class="water-input" type="text" [value]="quantityOfWater()">
+
+      <button id="close-modal" (click)="confirm()" class="drink-button">
+        <i class="ti ti-plus"></i>
+        Beber
+      </button>
+    </ion-content>
+  </ng-template>
+  </ion-modal>
+  <!--<button (click)="this.router.navigate(['/app/water-reminder/history'])" class="btn-primary">Histórico</button>-->
+</ion-content>
+

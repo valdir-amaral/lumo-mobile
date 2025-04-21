@@ -1,0 +1,19 @@
+.middle-tab {
+    background-color: #1ac8f3;
+    border-radius: 24px;
+    color: white;
+}
+.middle-tab i::before {
+    font-size: 34px;
+}
+ion-tab-bar {
+    border-radius: 24px;
+    padding: 10px 0;
+    border: 2px solid #DBDADE;
+    max-width: 95%;
+    margin: 0 auto 25px auto;
+    width: 100%;
+}
+ion-tab-button.tab-selected {
+    color: #0ca8cf !important;
+}

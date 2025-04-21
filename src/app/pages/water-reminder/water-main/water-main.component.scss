@@ -1,0 +1,128 @@
+ion-content::part(background) {
+    background: linear-gradient(180deg,  rgb(52, 137, 248) 0%, rgb(1, 23, 148) 100%);
+}
+body {
+    color: white !important;
+}
+ion-modal ion-content::part(background) {
+    background: white;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 100px);
+}
+.wrapper-drink {
+    margin-top: auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-drink button {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 50px;
+    max-width: 120px;
+    color: white;
+    background: rgba(0,173,233,1);
+}
+.btn-cup {
+    padding: 12px;
+    color: #444 !important;
+    background-color: white !important;
+}
+.wrapper-drink #open-modal {
+    background: white;
+    color: #333;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.btn-cup i::before {
+    font-size: 24px;
+}
+.modal-close {
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+}
+.modal-close i::before {
+    color: #5c5c5c;
+    font-size: 30px;
+}
+.drinking-water {
+    color: white;
+   
+
+    font-size: 54px;
+    font-weight: 700;
+    word-spacing: -5px;
+    text-align: center;
+}
+.drinking-water .ml {
+    font-size: 16px;
+    word-spacing: 1px;
+}
+.main-wrapper {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.main-wrapper img {
+    width: 100px;
+    margin-bottom: 24px;
+}
+.goal {
+    font-size: 18px;
+    text-align: center;
+    color: #d4d4d4;
+}
+.drink-button {
+    display: block;
+    max-width: fit-content;
+    margin: 25px auto;
+    padding: 18px 26px;
+    border-radius: 28px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(114, 159, 255) 0%, rgb(51, 71, 250) 70%);
+    box-shadow: 1px 3px 20px 4px rgba(242,242,242,1);
+}
+
+ion-range {
+    --bar-width: 100px
+}
+.range-wrapper {
+    max-width: 150px;
+    margin: 0 auto;
+}
+.water-input {
+    border: none;
+    font-size: 36px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 65px;
+    display: block;
+    margin: auto;
+}
+.water-input:focus {
+    outline: none;
+}
+.chip {
+    font-weight: 600;
+    margin: 25px auto;
+    color: #2c2c2c;
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    max-width: fit-content;
+}

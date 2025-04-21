@@ -1,0 +1,7 @@
+{
+  "name": "lumo-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

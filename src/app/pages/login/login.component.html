@@ -1,0 +1,72 @@
+<ion-content [fullscreen]="true">
+<div class="container">
+  <img class="logo" src="assets/logo.png" alt="">
+  @if (signInState) {
+    <h1>Conecte-se à sua conta do Lumo</h1>
+    <p>Entre na sua conta para aproveitar todos os recursos disponíveis do Lumo.</p>
+  } @else {
+    <h1>Conheça agora o Lumo!</h1>
+    <p>Crie uma conta e mergulhe no mundo incrível do Lumo.</p>
+  }
+  
+  
+  @if (signInState) {
+    <form (submit)="login()" [formGroup]="userForm">
+      <fieldset>
+        <i class="ti ti-mail"></i>
+        <input (input)="warnMessage = ''" class="input-md" type="text" placeholder="E-mail ou nome de usuário" formControlName="userEmail">
+      </fieldset>
+      <fieldset>
+        <i width="30" class="ti ti-lock"></i>
+        <input (input)="warnMessage = ''" class="input-md" type="text" placeholder="Senha" formControlName="password">
+      </fieldset>
+
+      <p class="warn-message">{{warnMessage}}</p>
+
+      <button type="submit" class="btn-primary" (disabled)="loading === true">
+        @if (!loading){
+          Entrar
+        } @else {
+          <ion-spinner name="circular"></ion-spinner>
+        }
+
+      </button>
+      <button (click)="signInState = false" class="btn-secondary">Criar conta</button>
+      
+      <p>Esqueceu sua senha?</p>
+  </form>
+  } @else {
+    <form (submit)="register()" [formGroup]="userForm">
+        <fieldset>
+          
+          <input class="input-md" type="text" placeholder="Nome" formControlName="firstName">
+        </fieldset>
+        <fieldset>
+          
+          <input class="input-md" type="text" placeholder="Sobrenome" formControlName="lastName">
+        </fieldset>
+      <fieldset>
+        <i class="ti ti-at"></i>
+        <input class="input-md" type="text" placeholder="Nome de usuário" formControlName="userName">
+      </fieldset>
+      <fieldset>
+        <i class="ti ti-mail"></i>
+        <input class="input-md" type="text" placeholder="E-mail" formControlName="userEmail">
+      </fieldset>
+      <fieldset>
+        <i width="30" class="ti ti-lock"></i>
+        <input class="input-md" type="text" placeholder="Senha" formControlName="password">
+      </fieldset>
+      <fieldset>
+        <i width="30" class="ti ti-lock"></i>
+        <input class="input-md" type="text" placeholder="Confirmar senha" formControlName="confirmPassword">
+      </fieldset>
+      <button type="submit" class="btn-primary">Criar Conta</button>
+
+      <p>Já possui uma conta? <a (click)="signInState = true">Entre!</a></p>
+  </form>
+  }
+  
+</div>
+
+</ion-content>
